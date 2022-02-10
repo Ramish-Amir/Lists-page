@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+
+}
+
+.list-container {
+    position: relative;
+    padding: 10px 20px;
+    background: rgba(128, 128, 128, 1);
+    width: max-content;
+    margin: 10px auto;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.list-container-one {
+    margin-top: 80px;
+}
+
+.ms-label {
+    position: absolute;
+    top: -40px;
+    left: 25px;
+    transform: rotate(-35deg);
+
+}
+
+.vs-label {
+    position: absolute;
+    top: -50px;
+    left: 55px;
+    transform: rotate(-35deg);
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
+.list-header {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: 2px solid black;
+}
+
+.list-top {
+    display: flex;
+}
+
+.list-count {
+    min-width: 50px;
+}
+
+.list-title {
+    text-align: left;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width: 150px;
+    margin-top: 5px;
+    padding: 2px 5px;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 18px;
+
+}
+
+.item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.item-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+}
+
+.item-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 150px;
+    text-align: left;
+}
+
+.dropdown-btn {
+    text-align: right;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    border: 2px solid #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: calc(100% + 1px);
+    top: 0px;
+    width: 100%;
+    max-height: 50vh;
+    overflow: auto;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 10;
+}
+
+.dropdown-content>span {
+    color: gray;
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dropdown-content>span:hover {
+    color: #fff;
+    background: black;
+}
+
+.show {
+    display: flex;
+}
+
+.item.list-header {
+    border-radius: 0px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .dropdown-content {
+        left: 0;
+        right: 0;
+        top: 30px;
+    }
+}
